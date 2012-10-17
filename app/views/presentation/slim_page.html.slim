@@ -1,0 +1,88 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title Testanwendung
+    == stylesheet_link_tag "application"
+    == javascript_include_tag "application"
+
+body
+  .navbar.navbar-inverse.navbar-fixed-top
+    .navbar-inner
+      .container-fluid
+        a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.brand href="#" Project name
+        .nav-collapse.collapse
+          p.navbar-text.pull-right
+            | Logged in as 
+            a.navbar-link href="#" Username
+          ul.nav
+            li.active
+              a href="#" Home
+            li
+              a href='#' About
+            li
+              a href='#' Contact
+
+  .container-fluid
+    .row-fluid
+      .span3
+        .well.sidebar-nav
+          ul.nav.nav-list
+            - @items.each do |head, list|
+              li.nav-header = head
+              - list.each do |item|
+                li
+                  a href='#' = item
+      .span9
+        .hero-unit
+          h1 Hello, world!
+          p This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+          p
+            a.btn.btn-primary.btn-large Learn more &raquo;
+        .row-fluid
+          .span4
+            h2 Heading
+            p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            p
+              a.btn href='#' View details &raquo;
+
+          .span4
+            h2 Heading
+            p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            p
+              a.btn href='#' View details &raquo;
+
+          .span4
+            h2 Heading
+            p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            p
+              a.btn href='#' View details &raquo;
+
+        .row-fluid
+          .span4
+            h2 Heading
+            p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            p
+              a.btn href='#' View details &raquo;
+
+          .span4
+            h2 Heading
+            p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            p
+              a.btn href='#' View details &raquo;
+
+          .span4
+            h2 Heading
+            p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            p
+              a.btn href='#' View details &raquo;
+
+  hr
+
+  footer
+    p &copy; Company 2012
